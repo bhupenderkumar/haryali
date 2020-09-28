@@ -1,0 +1,9 @@
+{
+  "haryaliApp": {
+    "PaymentMethod": {
+      "null": "",
+      "CREDIT_CARD": "CREDIT_CARD",
+      "IDEAL": "IDEAL"
+    }
+  }
+}

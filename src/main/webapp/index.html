@@ -20,10 +20,14 @@
     <![endif]-->
     <jhi-main>
         <div class="app-loading">
-            <div class="lds-css ng-scope">
-                <div class="lds-pacman">
-                    <div><div></div><div></div><div></div></div>
-                    <div><div></div><div></div><div></div></div>
+            <div class="wrap">
+                <div class="base">
+                    <div class="flowerpot"></div>
+                    <div class="blade blade-center"></div>
+                    <div class="blade blade-left-s"></div>
+                    <div class="blade blade-right-s"></div>
+                    <div class="blade blade-left-l"></div>
+                    <div class="blade blade-right-l"></div>
                 </div>
             </div>
         </div>
@@ -84,8 +88,8 @@
             }
         }
     </script>
-    <!-- uncomment this for adding service worker
-        <script>
+ 
+         <script>
             if ('serviceWorker' in navigator) {
                 window.addEventListener('load', function() {
                     navigator.serviceWorker.register('/service-worker.js')
@@ -95,7 +99,7 @@
                 });
             }
         </script>
-    -->
+   
     <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
     <script>
         (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

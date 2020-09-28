@@ -1,0 +1,30 @@
+{
+  "haryaliApp": {
+    "customerDetails": {
+      "home": {
+        "title": "CustomerDetails",
+        "createLabel": "नया Customer Details बनाएँ",
+        "createOrEditLabel": "Customer Details बनाएँ या संपादित करें",
+        "search": "Customer Details खोजें",
+        "notFound": "No Customer Details found"
+      },
+      "created": "एक नया Customer Details [identifier: {{ param }}] तैयार है",
+      "updated": "एक Customer Details [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Customer Details [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Customer Details [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Customer Details"
+      },
+      "gender": "Gender",
+      "phone": "Phone",
+      "addressLine1": "Address Line 1",
+      "addressLine2": "Address Line 2",
+      "city": "City",
+      "country": "Country",
+      "user": "User",
+      "cart": "Cart"
+    }
+  }
+}

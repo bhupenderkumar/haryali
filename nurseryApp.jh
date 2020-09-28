@@ -1,0 +1,76 @@
+/** Product sold by the Online store */
+entity Product {
+    name String required
+    description String
+    price BigDecimal required min(0)
+    size Size required
+    image ImageBlob
+}
+
+enum Size {
+    S, M, L, XL, XXL
+}
+
+/** Product categories to group products */
+entity ProductCategory {
+    name String required
+    description String
+}
+
+/** Additional details for users as we can't modify built-in user entity vis JDL */
+entity CustomerDetails {
+    gender Gender required
+    phone String required
+    addressLine1 String required
+    addressLine2 String
+    city String required
+    country String required
+}
+
+enum Gender {
+    MALE, FEMALE, OTHER
+}
+
+/** Shopping cart to hold users orders */
+entity ShoppingCart {
+    placedDate Instant required
+    status OrderStatus required
+    totalPrice BigDecimal required min(0)
+    paymentMethod PaymentMethod required
+}
+
+enum OrderStatus {
+    COMPLETED, PAID, PENDING, CANCELLED
+}
+
+enum PaymentMethod {
+    CREDIT_CARD, IDEAL
+}
+
+/** Product order keeps track of orders */
+entity ProductOrder {
+    quantity Integer required min(0)
+    totalPrice BigDecimal required min(0)
+}
+
+// Every user will have a customer detail
+relationship OneToOne {
+    CustomerDetails{user(login) required} to User
+}
+
+// Many product orders can be tracked back to a product
+relationship ManyToOne {
+    ProductOrder{product(name) required} to Product
+}
+
+relationship OneToMany {
+    // Every customer can have many shopping carts
+    CustomerDetails{cart} to ShoppingCart{customerDetails required},
+    // Every shopping cart can have many product orders
+    ShoppingCart{order} to ProductOrder{cart required},
+    // Every product category can have many products
+    ProductCategory{product} to Product{productCategory(name) required}
+}
+
+service * with serviceClass
+paginate Product, CustomerDetails, ProductCategory with pagination

@@ -1,0 +1,28 @@
+{
+  "haryaliApp": {
+    "shoppingCart": {
+      "home": {
+        "title": "ShoppingCarts",
+        "createLabel": "नया Shopping Cart बनाएँ",
+        "createOrEditLabel": "Shopping Cart बनाएँ या संपादित करें",
+        "search": "Shopping Cart खोजें",
+        "notFound": "No Shopping Carts found"
+      },
+      "created": "एक नया Shopping Cart [identifier: {{ param }}] तैयार है",
+      "updated": "एक Shopping Cart [identifier: {{ param }}] का अद्यतन हुआ है",
+      "deleted": "Shopping Cart [identifier: {{ param }}] हटा दिया है",
+      "delete": {
+        "question": "Shopping Cart [id: {{ id }}] हटाने की पुष्टि करें"
+      },
+      "detail": {
+        "title": "Shopping Cart"
+      },
+      "placedDate": "Placed Date",
+      "status": "Status",
+      "totalPrice": "Total Price",
+      "paymentMethod": "Payment Method",
+      "order": "Order",
+      "customerDetails": "Customer Details"
+    }
+  }
+}
