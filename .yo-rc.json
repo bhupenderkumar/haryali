@@ -42,6 +42,8 @@
       "en",
       "hi"
     ],
-    "blueprints": []
+    "blueprints": [],
+    "herokuAppName": "haryali",
+    "herokuDeployType": "git"
   }
 }
