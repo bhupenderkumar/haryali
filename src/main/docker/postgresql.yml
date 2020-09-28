@@ -1,0 +1,11 @@
+version: '2'
+services:
+  haryali-postgresql:
+    image: postgres:11.4
+    # volumes:
+    #     - ~/volumes/jhipster/haryali/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=haryali
+      - POSTGRES_PASSWORD=
+    ports:
+      - 5432:5432
